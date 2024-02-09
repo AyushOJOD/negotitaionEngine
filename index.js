@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./data/database.js";
 import authRoutes from "./routes/authRoute.js";
+import messageRoutes from "./routes/messageRoute.js";
 import cookieParser from "cookie-parser";
 
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(
 );
 
 app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);
 app.use("/", (req, res) => res.send("API is running"));
 
 const PORT = process.env.PORT || 5000;
