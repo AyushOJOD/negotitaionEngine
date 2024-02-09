@@ -34,17 +34,11 @@ export const getMessagebyId = async (req, res, next) => {
 };
 
 export const getConvergence = async (req, res, next) => {
-
   try {
-    
     const { sender, reciever } = req.body;
 
-    const messages = await Message.find({$all: [sender, reciever]});
-
-    
-
+    const messages = await Message.find({ $all: [sender, reciever] });
   } catch (error) {
     next(error);
-    
   }
-}
+};

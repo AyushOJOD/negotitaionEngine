@@ -13,7 +13,7 @@ const productSchema = new mongoose.Schema({
     required: true,
   },
   seller: {
-    type: Mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
 });
