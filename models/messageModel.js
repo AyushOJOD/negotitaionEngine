@@ -33,3 +33,5 @@ const messageSchema = new mongoose.Schema(
 );
 
 export const Messages = new mongoose.model("Message", messageSchema);
+
+export default Messages;
